@@ -1,0 +1,38 @@
+{
+  "name": "pruno-js",
+  "version": "1.0.0",
+  "description": "A lightweight module that builds JavaScripts with Browserify. Handles React and ES6 transformations as well as uglify and source-maps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cdebotton/pruno-js.git"
+  },
+  "keywords": [
+    "pruno",
+    "gulp",
+    "build",
+    "js",
+    "browserify",
+    "es6",
+    "react"
+  ],
+  "author": "Christian de Botton <debotton@brooklynunited.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cdebotton/pruno-js/issues"
+  },
+  "homepage": "https://github.com/cdebotton/pruno-js",
+  "dependencies": {
+    "6to5ify": "^4.0.0",
+    "browserify": "^8.1.1",
+    "envify": "^3.2.0",
+    "gulp-load-plugins": "^0.8.0",
+    "object-assign": "^2.0.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.0.0",
+    "watchify": "^2.2.1"
+  }
+}
