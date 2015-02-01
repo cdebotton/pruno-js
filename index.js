@@ -1,6 +1,5 @@
 "use strict";
 
-var pruno = module.parent.require('pruno');
 var assign = require('object-assign');
 var browserify = require('browserify');
 var watchify = require('watchify');
@@ -65,11 +64,8 @@ var bundle = function (gulp, bundler, params) {
 
   params || (params = {});
 
-  pruno.notify(PLUGIN_NAME, 'Task `' + params.taskName + '` started!')
-
   return bundler.bundle()
     .on('error', function (err) {
-      pruno.error(PLUGIN_NAME, err);
       this.emit('end');
     })
     .pipe(source(fileName))
@@ -106,4 +102,4 @@ function transform(bundler, params) {
   return bundler;
 }
 
-module.exports = pruno.extend(JSTask);
+module.exports = JSTask;
