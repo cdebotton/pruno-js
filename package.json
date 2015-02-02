@@ -1,6 +1,6 @@
 {
   "name": "pruno-js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A lightweight module that builds JavaScripts with Browserify. Handles React and ES6 transformations as well as uglify and source-maps.",
   "main": "index.js",
   "scripts": {
