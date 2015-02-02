@@ -10,6 +10,9 @@ var envify = require('envify/custom');
 var to5ify = require('6to5ify');
 var to5Runtime = require('./utils/to5Runtime');
 var onError = require('./utils/on-error');
+var hbsfy = require('hbsfy').configure({
+  extensions: ['hbs', 'handlebars']
+});
 
 var PLUGIN_NAME = 'JsTask';
 
@@ -26,6 +29,7 @@ JSTask.getDefaults = function() {
     'uglify': false,
     'source-maps': true,
     'es6': false,
+    'handlebars': false,
     'runtime': false
   };
 };
@@ -98,6 +102,10 @@ function transform(bundler, params) {
 
   if (params.es6 || params.harmony || params.react) {
     bundler.transform(to5ify);
+  }
+
+  if (params.handlebars || params.hbs || params.hbsfy) {
+    bundler.transform(hbsfy);
   }
 
   return bundler;
