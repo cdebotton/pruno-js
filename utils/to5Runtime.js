@@ -4,7 +4,7 @@ var through = require('through');
 
 function to5Runtime(file) {
   var data = '';
-  var header = 'require("pruno-js/node_modules/6to5ify/node_modules/6to5/polyfill");';
+  var header = 'require("pruno-js/node_modules/6to5/polyfill");';
   var stream = through(write, end);
 
   function write(buf) {
