@@ -66,6 +66,7 @@ var bundle = function (gulp, bundler, params) {
 
   return bundler.bundle()
     .on('error', function (err) {
+      console.error(err);
       this.emit('end');
     })
     .pipe(source(fileName))
